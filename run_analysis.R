@@ -98,3 +98,9 @@ meanstddata<-alldata[,as.character(meanstdnames)]
 ## generate tidydata
 tidydata <- meanstddata
 write.table(tidydata,file='tidydata.txt',row.names = FALSE)
+
+## generate tidydata 2
+for (i in meanstdnames) {summarize(group_by(tidydata,activityid,subjectid),mean(i))
+
+## generate second tidydata with average
+tidydata2<-summarize
